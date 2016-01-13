@@ -1,0 +1,105 @@
+:root {
+    --bgcolor: #000;
+    --heading-bgcolor: #333;
+    --primary-color: #fff;
+    --accent-color: #448aff;
+    --nav-height: 4.5rem;
+    --content-max-width: 80rem;
+    --content-margin: 5%;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(45deg, color(var(--bgcolor) lightness(50%)), var(--bgcolor));
+    color: var(--primary-color);
+    font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+    color: var(--accent-color);
+}
+
+div.mission {
+    max-width: var(--content-max-width);
+    margin: 0 var(--content-margin);
+}
+
+nav {
+    background-color: var(--heading-bgcolor);
+    display: flex;
+    height: var(--nav-height);
+    justify-content: space-between;
+
+    & a {
+        color: var(--primary-color);
+        display: block;
+        height: var(--nav-height);
+        line-height: var(--nav-height);
+        padding: 0 1rem;
+        text-decoration: none;
+
+        &:hover {
+            transition: 1s;
+            background-color: var(--accent-color);
+        }
+    }
+
+    & .block.home {
+        text-align: right;
+        & .site-name {
+            font-size: 2em;
+            line-height: 1.5em;
+        }
+    }
+
+    & .block.home a {
+        & div.title-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+            line-height: 1em;
+            height: var(--nav-height);
+        }
+    }
+}
+
+div.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    max-width: var(--content-max-width);
+    margin: 0 var(--content-margin);
+
+    & h2 {
+        flex-basis: 100%;
+    }
+
+    & .block {
+        color: var(--primary-color);
+        margin: 0 2rem 1rem 2rem;
+        width: 20rem;
+
+        border-radius: 0.5rem;
+        background-color: black;
+        box-shadow: 1px 1px 5px color(white alpha(20%));
+
+        & h3 {
+            margin: 0;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+            background-color: var(--heading-bgcolor);
+            color: var(--primary-color);
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        & p, & h4 {
+            margin: 1rem;
+        }
+
+        & a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    }
+}

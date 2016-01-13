@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    background-image: -webkit-linear-gradient(45deg, rgb(128, 128, 128), #000);
+    background-image: linear-gradient(45deg, rgb(128, 128, 128), #000);
+    color: #fff;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+a {
+    color: #448aff;
+}
+
+div.mission {
+    max-width: 80rem;
+    margin: 0 5%;
+}
+
+nav {
+    background-color: #333;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4.5rem;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between
+}
+
+nav .block.home a div.title-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: right;
+    line-height: 1em;
+    height: 4.5rem;
+}
+
+nav .block.home {
+    text-align: right
+}
+
+nav .block.home .site-name {
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+nav a {
+    color: #fff;
+    display: block;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding: 0 1rem;
+    text-decoration: none
+}
+
+nav a:hover {
+    -webkit-transition: 1s;
+    transition: 1s;
+    background-color: #448aff;
+}
+
+div.services {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
+    max-width: 80rem;
+    margin: 0 5%
+}
+
+div.services .block {
+    color: #fff;
+    margin: 0 2rem 1rem 2rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2)
+}
+
+div.services .block a {
+    color: #448aff;
+    text-decoration: none;
+}
+
+div.services .block p, div.services .block h4 {
+    margin: 1rem;
+}
+
+div.services .block h3 {
+    margin: 0;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+div.services h2 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+}

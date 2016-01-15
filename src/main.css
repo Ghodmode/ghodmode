@@ -4,8 +4,8 @@
     --primary-color: #fff;
     --accent-color: #448aff;
     --nav-height: 4.5rem;
-    --content-max-width: 80rem;
-    --content-margin: 5%;
+    --content-max-width: 70rem;
+    --content-margin: auto;
 }
 
 body {
@@ -21,7 +21,7 @@ a {
 
 div.mission {
     max-width: var(--content-max-width);
-    margin: 0 var(--content-margin);
+    margin: 0 auto;
 }
 
 nav {
@@ -78,7 +78,7 @@ div.services {
 
     & .block {
         color: var(--primary-color);
-        margin: 0 2rem 1rem 2rem;
+        margin: 0 1rem 1rem 0;
         width: 20rem;
 
         border-radius: 0.5rem;

@@ -20,14 +20,7 @@ a {
 }
 
 div.mission {
-    max-width: var(--content-max-width);
     margin: 0 var(--content-margin);
-}
-
-@media (max-width: 40rem) {
-    div.mission p {
-        font-size: 1.2rem;
-    }
 }
 
 nav {
@@ -72,27 +65,11 @@ div.block.home {
     }
 }
 
-@media (max-width: 40rem) {
-    nav a {
-        font-size: 1.2rem;
-    }
-    div.block.home {
-        & .site-name {
-            font-size: 1.2rem;
-        }
-
-        & .slogan {
-            font-size: 1rem;
-        }
-    }
-}
-
 div.services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-    max-width: var(--content-max-width);
     margin: 0 var(--content-margin);
 
     & h2 {
@@ -127,7 +104,35 @@ div.services {
     }
 }
 
-@media (max-width: 40rem) {
+@custom-media --small-viewport (max-width: 40rem);
+@custom-media --large-viewport (min-width: 70rem);
+
+@media (--large-viewport) {
+    div.mission, div.services {
+        max-width: var(--content-max-width);
+        margin: 0 auto;
+    }
+}
+
+@media (--small-viewport) {
+    nav a {
+        font-size: 1.2rem;
+    }
+
+    div.mission p {
+        font-size: 1.2rem;
+    }
+
+    div.block.home {
+        & .site-name {
+            font-size: 1.2rem;
+        }
+
+        & .slogan {
+            font-size: 1rem;
+        }
+    }
+
     div.services .block p {
         font-size: 1.2rem;
     }

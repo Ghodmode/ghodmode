@@ -29,6 +29,7 @@ gulp.task('htmlmin', function() {
   return gulp.src('src/*.html')
     .pipe(htmlmin({
         collapseWhitespace: true,
+        conservativeCollapse: true,
         removeComments: true,
         collapseInlineTagWhitespace: true,
         collapseBooleanAttributes: true,

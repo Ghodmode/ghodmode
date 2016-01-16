@@ -27,7 +27,19 @@ gulp.task('css', function() {
 
 gulp.task('htmlmin', function() {
   return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+        collapseWhitespace: true,
+        removeComments: true,
+        collapseInlineTagWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeOptionalTags: true,
+        minifyCSS: true
+    }))
     .pipe(gulp.dest('.'))
 });
 

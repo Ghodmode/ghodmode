@@ -4,12 +4,14 @@
 <head>
     <meta name=viewport content="width=device-width, initial-scale=1">
 	<title>Ghodmode Development</title>
-    <!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    -->
     <style>
-        body{margin:0;background-image:-webkit-linear-gradient(45deg,gray,#000);background-image:linear-gradient(45deg,gray,#000);color:#fff;font-family:Verdana,Arial,sans-serif}a{color:#448aff}div.mission{margin:0 2rem}nav{background-color:#333;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}nav,nav a{height:10vh}nav a{color:#fff;font-size:1.5rem;display:block;line-height:10vh;padding:0 1rem;text-decoration:none}nav a:hover{
+        body{margin:0;background-image:-webkit-linear-gradient(45deg,gray,#000);background-image:linear-gradient(45deg,gray,#000);color:#fff;font-family:Verdana,Arial,sans-serif}a{color:#448aff}div.mission{margin:0 2rem}nav{background-color:#333;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}nav,nav a{height:4rem}nav a{color:#fff;font-size:1.5rem;display:block;line-height:4rem;padding:0 1rem;text-decoration:none}nav a:hover{
             -webkit-transition:1s;
             transition:1s;
-            background-color:#448aff}div.title-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:10vh}div.block.home,div.title-block{text-align:right}div.block.home .slogan{
+            background-color:#448aff}div.title-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:4rem}div.block.home,div.title-block{text-align:right}div.block.home .slogan{
             font-size:1.2rem;
             line-height:1em}div.block.home .site-name{
             font-size:2rem;
@@ -19,9 +21,36 @@
             width:20rem;
             border-radius:.5rem;
             background-color:#000;
-            box-shadow:1px 1px 5px hsla(0,0%,100%,.2)}div.services .block a{
+            box-shadow:1px 1px 5px hsla(0,0%,100%,.2)}div.services .block a.using{
+            color:#fff;
+            margin:1em;
+            font-weight:700}div.services .block a.using:focus:after{
+            -webkit-transform:rotate(90deg);
+            transform:rotate(90deg)}div.services .block a.using:focus+ul{
+            max-height:9em}div.services .block a.using:after{
+            content:'';
+            display:inline-block;
+            position:relative;
+            top:.1em;
+            width:0;
+            height:0;
+            margin:0 1em;
+            border-top:.4em solid transparent;
+            border-right:0;
+            border-bottom:.4em solid transparent;
+            border-left:.5em solid #fff;
+            -webkit-transition:.5s ease-in-out;
+            transition:.5s ease-in-out}div.services .block div.technologies:hover ul{
+            max-height:9em}div.services .block div.technologies:hover a.using:after{
+            -webkit-transform:rotate(90deg);
+            transform:rotate(90deg)}div.services .block div.technologies ul{
+            max-height:0;
+            overflow:hidden;
+            -webkit-transition:.5s ease-in-out;
+            transition:.5s ease-in-out}div.services .block a{
             color:#448aff;
-            text-decoration:none}div.services .block h4,div.services .block p{
+            text-decoration:none}div.services .block p{
+            min-height:10em}div.services .block h4,div.services .block p{
             margin:1rem}div.services .block h3{
             margin:0;
             padding:.5rem 0 .5rem .5rem;
@@ -66,12 +95,14 @@
         social media sites like Facebook, Twitter, Pinterest, Instagram, Google
         Plus, and more to help users find your site and share it with others.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>HTML(5)</li>
-            <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
-            <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+            </ul>
+        </div>
     </div>
     <div class="block backend">
         <h3>Back End</h3>
@@ -80,13 +111,36 @@
         Database integration, user profiles, search, and product or service
         representation.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>PHP</li>
-            <li>Ruby on Rails</li>
-            <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
-            <li>Oracle Database</li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>PHP</li>
+                <li>Ruby on Rails</li>
+                <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
+                <li>Oracle Database</li>
+            </ul>
+        </div>
+    </div>
+    <div class="block performance">
+        <h3>Performance Tuning</h3>
+        <p>
+        Decrease load time, improve usability, and improve search ranking.
+        Carefully analyze existing code for performance problems. Prioritize
+        <a href="https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent" target="_blank">above-the-fold</a>
+        content. Compress, minify, and optimize Javascript, HTML, CSS, and
+        images.
+        </p>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+                <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Google's PageSpeed Insights</a></li>
+                <li><a href="http://yslow.org/" target="_blank">YSlow</a> (Yahoo!'s rules for high performance web sites)</li>
+                <li><a href="http://www.webpagetest.org/" target="_blank">WebPagetest</a> 
+            </ul>
+        </div>
     </div>
     <div class="block design-implementation">
         <h3>Existing Design</h3>
@@ -94,13 +148,15 @@
         Take existing themes, Photoshop files (a.k.a.  PSD to HTML slicing), or
         other images, and apply them on your site.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>GIMP</li>
-            <li>HTML(5)</li>
-            <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
-            <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>GIMP</li>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+            </ul>
+        </div>
     </div>
     <div class="block reporting">
         <h3>Reporting</h3>
@@ -109,16 +165,18 @@
         present it in a way that's easy to read and understand for you and/or
         your users.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>HTML(5)</li>
-            <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
-            <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
-            <li>PHP</li>
-            <li>Ruby on Rails</li>
-            <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
-            <li>Oracle Database</li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+                <li>PHP</li>
+                <li>Ruby on Rails</li>
+                <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
+                <li>Oracle Database</li>
+            </ul>
+        </div>
     </div>
     <div class="block static">
         <h3>Static Sites</h3>
@@ -129,12 +187,14 @@
         package.  Development, hosting, and maintenance of a static site are
         all available at a very low price.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>HTML(5)</li>
-            <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
-            <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+            </ul>
+        </div>
     </div>
     <div class="block wordpress">
         <h3>WordPress Sites</h3>
@@ -144,29 +204,34 @@
         service information site, a forum, or a full online community, you can
         build it using WordPress.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>WordPress</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>WordPress</li>
+                <li>PHP</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
     </div>
     <div class="block maintenance">
         <h3>Existing Sites</h3>
         <p>
         Make a change, fix a bug, or update server software for a running site.
         </p>
-        <h4>Using:</h4>
-        <ul>
-            <li>HTML(5)</li>
-            <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
-            <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
-            <li>PHP</li>
-            <li>Ruby on Rails</li>
-            <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
-            <li>Oracle Database</li>
-        </ul>
+        <div class="technologies">
+            <a class="using" href="#0">Technologies Used:</a>
+            <ul>
+                <li>HTML(5)</li>
+                <li>CSS(3, <a href="http://www.xanthir.com/b4Ko0" target="_blank">4</a>)</li>
+                <li>Javascript, <a href="http://jquery.com" target="_blank">jQuery</a></li>
+                <li>PHP</li>
+                <li>Ruby on Rails</li>
+                <li>MySQL or <a href="https://mariadb.org/about/" target="_blank">MariaDB</a></li>
+                <li>Oracle Database</li>
+            </ul>
+        </div>
     </div>
+    <!--
     <div class="block hosting">
         <h3>Hosting</h3>
         <p>
@@ -175,6 +240,7 @@
         content, products, services, and sales and let us do the rest.
         </p>
     </div>
+    -->
     <div class="block seo">
         <h3>Search Engine Optimization</h3>
         <p>

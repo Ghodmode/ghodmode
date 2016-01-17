@@ -1,7 +1,7 @@
-body{margin:0;background-image:-webkit-linear-gradient(45deg,gray,#000);background-image:linear-gradient(45deg,gray,#000);color:#fff;font-family:Verdana,Arial,sans-serif}a{color:#448aff}div.mission{margin:0 2rem}nav{background-color:#333;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}nav,nav a{height:10vh}nav a{color:#fff;font-size:1.5rem;display:block;line-height:10vh;padding:0 1rem;text-decoration:none}nav a:hover{
+body{margin:0;background-image:-webkit-linear-gradient(45deg,gray,#000);background-image:linear-gradient(45deg,gray,#000);color:#fff;font-family:Verdana,Arial,sans-serif}a{color:#448aff}div.mission{margin:0 2rem}nav{background-color:#333;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}nav,nav a{height:4rem}nav a{color:#fff;font-size:1.5rem;display:block;line-height:4rem;padding:0 1rem;text-decoration:none}nav a:hover{
     -webkit-transition:1s;
     transition:1s;
-    background-color:#448aff}div.title-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:10vh}div.block.home,div.title-block{text-align:right}div.block.home .slogan{
+    background-color:#448aff}div.title-block{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:4rem}div.block.home,div.title-block{text-align:right}div.block.home .slogan{
     font-size:1.2rem;
     line-height:1em}div.block.home .site-name{
     font-size:2rem;
@@ -11,9 +11,36 @@ body{margin:0;background-image:-webkit-linear-gradient(45deg,gray,#000);backgrou
     width:20rem;
     border-radius:.5rem;
     background-color:#000;
-    box-shadow:1px 1px 5px hsla(0,0%,100%,.2)}div.services .block a{
+    box-shadow:1px 1px 5px hsla(0,0%,100%,.2)}div.services .block a.using{
+    color:#fff;
+    margin:1em;
+    font-weight:700}div.services .block a.using:focus:after{
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg)}div.services .block a.using:focus+ul{
+    max-height:9em}div.services .block a.using:after{
+    content:'';
+    display:inline-block;
+    position:relative;
+    top:.1em;
+    width:0;
+    height:0;
+    margin:0 1em;
+    border-top:.4em solid transparent;
+    border-right:0;
+    border-bottom:.4em solid transparent;
+    border-left:.5em solid #fff;
+    -webkit-transition:.5s ease-in-out;
+    transition:.5s ease-in-out}div.services .block div.technologies:hover ul{
+    max-height:9em}div.services .block div.technologies:hover a.using:after{
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg)}div.services .block div.technologies ul{
+    max-height:0;
+    overflow:hidden;
+    -webkit-transition:.5s ease-in-out;
+    transition:.5s ease-in-out}div.services .block a{
     color:#448aff;
-    text-decoration:none}div.services .block h4,div.services .block p{
+    text-decoration:none}div.services .block p{
+    min-height:10em}div.services .block h4,div.services .block p{
     margin:1rem}div.services .block h3{
     margin:0;
     padding:.5rem 0 .5rem .5rem;

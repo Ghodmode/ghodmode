@@ -6,10 +6,11 @@ var precss = require('precss');
 var nesting = require('postcss-nesting');
 var cssnano = require('cssnano');
 var htmlmin = require('gulp-htmlmin');
+var smoosher = require('gulp-smoosher');
 
 var paths = {
-    css: './src/*.css',
-    html: './src/*.html'
+    css: 'src/*.css',
+    html: 'src/*.html'
 };
 
 gulp.task('css', function() {
@@ -22,30 +23,31 @@ gulp.task('css', function() {
     ];
     return gulp.src(paths.css)
         .pipe(postcss(processors))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('css'));
 });
 
-gulp.task('htmlmin', function() {
-  return gulp.src('src/*.html')
-    .pipe(htmlmin({
-        collapseWhitespace: true,
-        conservativeCollapse: true,
-        removeComments: true,
-        collapseInlineTagWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes: true,
-        removeRedundantAttributes: true,
-        removeEmptyAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        removeOptionalTags: true,
-        minifyCSS: true
-    }))
-    .pipe(gulp.dest('.'))
+gulp.task('html', ['css'],  function() {
+    return gulp.src('src/*.html')
+        .pipe(smoosher({ base: '.' }))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            conservativeCollapse: true,
+            removeComments: true,
+            collapseInlineTagWhitespace: true,
+            collapseBooleanAttributes: true,
+            removeAttributeQuotes: true,
+            removeRedundantAttributes: true,
+            removeEmptyAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            removeOptionalTags: true,
+            minifyCSS: true
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('watch', function(){
-    gulp.watch(paths.css, ['css']);
-    gulp.watch(paths.html, ['htmlmin']);
+    gulp.watch(paths.css, ['css', 'html']);
+    gulp.watch(paths.html, ['html']);
 });
 

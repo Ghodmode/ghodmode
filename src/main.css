@@ -6,6 +6,7 @@
     --nav-height: 4rem;
     --content-max-width: 70rem;
     --content-margin: 2rem;
+    --bradius: 8px;
 }
 
 body {
@@ -21,10 +22,15 @@ a {
 
 div.mission {
     margin: 0 var(--content-margin);
+    background-color: color(var(--bgcolor) alpha(50%));
+    border-radius: var(--bradius);
+    & p {
+        padding: 1em;
+    }
 }
 
 nav {
-    background-color: var(--heading-bgcolor);
+    background-color: color(var(--bgcolor) alpha(50%));
     display: flex;
     height: var(--nav-height);
     justify-content: space-between;
@@ -69,11 +75,14 @@ div.services {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: color(var(--bgcolor) alpha(50%));
+    border-radius: var(--bradius);
 
     margin: 0 var(--content-margin);
 
     & h2 {
         flex-basis: 100%;
+        padding: 1em;
     }
 
     & .block {
@@ -81,7 +90,7 @@ div.services {
         margin: 0 1rem 1rem 0;
         width: 20rem;
 
-        border-radius: 0.5rem;
+        border-radius: var(--bradius);
         background-color: black;
         box-shadow: 1px 1px 5px color(white alpha(20%));
 
@@ -90,7 +99,7 @@ div.services {
             padding: 0.5rem 0 0.5rem 0.5rem;
             background-color: var(--heading-bgcolor);
             color: var(--primary-color);
-            border-radius: 0.5rem 0.5rem 0 0;
+            border-radius: var(--bradius) var(--bradius) 0 0;
         }
 
         & p, & h4 {

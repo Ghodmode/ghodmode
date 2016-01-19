@@ -7,6 +7,7 @@ var nesting = require('postcss-nesting');
 var cssnano = require('cssnano');
 var htmlmin = require('gulp-htmlmin');
 var smoosher = require('gulp-smoosher');
+var sequence = require('run-sequence');
 
 var paths = {
     css: 'src/*.css',
@@ -26,7 +27,7 @@ gulp.task('css', function() {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('html', ['css'],  function() {
+gulp.task('html',  function() {
     return gulp.src('src/*.html')
         .pipe(smoosher({ base: '.' }))
         .pipe(htmlmin({
@@ -46,8 +47,12 @@ gulp.task('html', ['css'],  function() {
         .pipe(gulp.dest('.'));
 });
 
+gulp.task('csshtml', function() {
+    sequence('css', 'html');
+});
+
 gulp.task('watch', function(){
-    gulp.watch(paths.css, ['css', 'html']);
+    gulp.watch(paths.css, ['csshtml']);
     gulp.watch(paths.html, ['html']);
 });
 
